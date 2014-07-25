@@ -7,9 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <FacebookSDK/FacebookSDK.h>
+
+@class MSDynamicsDrawerViewController;
+@class LogInViewController;
+@class RightPanelViewController;
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
-
 @property (strong, nonatomic) UIWindow *window;
-
+@property (strong, nonatomic) MSDynamicsDrawerViewController *dynamicsDrawerViewController;
+@property (strong, nonatomic) LogInViewController *logInViewController;
+@property (strong, nonatomic) RightPanelViewController *rightPanelViewController;
+-(void)logout;
+- (void)sessionStateChanged:(FBSession *)session state:(FBSessionState) state error:(NSError *)error;
 @end
