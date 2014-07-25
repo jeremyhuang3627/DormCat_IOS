@@ -13,6 +13,6 @@
 @interface CleanersViewController : UIViewController <UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
 @property (nonatomic, weak) IBOutlet UIButton *rightButton;
-@property (nonatomic, weak) IBOutlet UINavigationBar *navigationBar;
+@property (nonatomic, weak) IBOutlet UIView *navigationView;
 @property (nonatomic, weak) TabBarViewController * dcTabBarViewController;
 @end

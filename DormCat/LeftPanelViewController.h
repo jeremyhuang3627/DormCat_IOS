@@ -11,7 +11,7 @@
 @class MSDynamicsDrawerViewController;
 @class DormCatCustomer;
 
-@interface RightPanelViewController : UIViewController
+@interface LeftPanelViewController : UIViewController
 @property (weak, nonatomic) MSDynamicsDrawerViewController *dynamicsDrawerViewController;
 @property (nonatomic,strong) IBOutlet UILabel * logInLabel;
 @property (nonatomic,strong) IBOutlet UILabel * signUpTextField;

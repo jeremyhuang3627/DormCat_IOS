@@ -7,15 +7,15 @@
 //
 
 #import "AppDelegate.h"
-#import "RightPanelViewController.h"
+#import "LeftPanelViewController.h"
 #import "macros.h"
 #import "DormCatCustomer.h"
 
-@interface RightPanelViewController ()
+@interface LeftPanelViewController ()
 
 @end
 
-@implementation RightPanelViewController
+@implementation LeftPanelViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

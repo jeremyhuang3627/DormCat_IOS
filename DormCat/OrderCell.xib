@@ -53,6 +53,6 @@
         <image name="label_bedroom.png" width="120" height="60"/>
         <image name="paw_down.png" width="80" height="60"/>
         <image name="paw_up.png" width="80" height="60"/>
-        <image name="sofa.png" width="120" height="120"/>
+        <image name="sofa.png" width="200" height="200"/>
     </resources>
 </document>

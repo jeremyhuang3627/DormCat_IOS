@@ -44,7 +44,7 @@ static NSString *const CleanerCellIdentifier = @"CleanerCell";
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.view.backgroundColor = UIColorFromRGB(BACKGROUND_COLOR);
+    self.view.backgroundColor = self.navigationView.backgroundColor = UIColorFromRGB(BACKGROUND_COLOR);
     UINib *cellNib = [UINib nibWithNibName:CleanerCellIdentifier bundle:nil];
 	[self.tableView registerNib:cellNib forCellReuseIdentifier:CleanerCellIdentifier];
     self.tableView.rowHeight = 90;

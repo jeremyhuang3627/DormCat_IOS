@@ -21,8 +21,8 @@
 		5497B2BB197D488100E582CD /* DormCatTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5497B2BA197D488100E582CD /* DormCatTests.m */; };
 		5497B2C8197D496500E582CD /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5497B2C7197D496500E582CD /* TabBarViewController.m */; };
 		5497B307197D4BA600E582CD /* TabBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5497B306197D4BA600E582CD /* TabBarViewController.xib */; };
-		5497B309197D4BBC00E582CD /* RightPanelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5497B308197D4BBC00E582CD /* RightPanelViewController.xib */; };
-		5497B30C197D4BE100E582CD /* RightPanelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5497B30B197D4BE100E582CD /* RightPanelViewController.m */; };
+		5497B309197D4BBC00E582CD /* LeftPanelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5497B308197D4BBC00E582CD /* LeftPanelViewController.xib */; };
+		5497B30C197D4BE100E582CD /* LeftPanelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5497B30B197D4BE100E582CD /* LeftPanelViewController.m */; };
 		5497B30F197D50C100E582CD /* User.png in Resources */ = {isa = PBXBuildFile; fileRef = 5497B30E197D50C100E582CD /* User.png */; };
 		5497B311197D698F00E582CD /* CleanerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5497B310197D698F00E582CD /* CleanerCell.xib */; };
 		5497B313197D6E3F00E582CD /* cat.png in Resources */ = {isa = PBXBuildFile; fileRef = 5497B312197D6E3F00E582CD /* cat.png */; };
@@ -62,6 +62,8 @@
 		5497D81C19819E0A00E582CD /* Minus@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5497D81A19819E0A00E582CD /* Minus@2x.png */; };
 		5497D81D19819E0A00E582CD /* Plus@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5497D81B19819E0A00E582CD /* Plus@2x.png */; };
 		5497D8201981EC2F00E582CD /* DormCatCustomer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5497D81F1981EC2F00E582CD /* DormCatCustomer.m */; };
+		5497D8221982636A00E582CD /* metallic_ring.png in Resources */ = {isa = PBXBuildFile; fileRef = 5497D8211982636A00E582CD /* metallic_ring.png */; };
+		5497D824198268E700E582CD /* ring_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 5497D823198268E700E582CD /* ring_white.png */; };
 		BE8049E0DA3642E79F89FA81 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DB5B183C043640F78CCA199C /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -96,9 +98,9 @@
 		5497B2C6197D496500E582CD /* TabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarViewController.h; sourceTree = "<group>"; };
 		5497B2C7197D496500E582CD /* TabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarViewController.m; sourceTree = "<group>"; };
 		5497B306197D4BA600E582CD /* TabBarViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TabBarViewController.xib; sourceTree = "<group>"; };
-		5497B308197D4BBC00E582CD /* RightPanelViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RightPanelViewController.xib; sourceTree = "<group>"; };
-		5497B30A197D4BE100E582CD /* RightPanelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RightPanelViewController.h; sourceTree = "<group>"; };
-		5497B30B197D4BE100E582CD /* RightPanelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RightPanelViewController.m; sourceTree = "<group>"; };
+		5497B308197D4BBC00E582CD /* LeftPanelViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LeftPanelViewController.xib; sourceTree = "<group>"; };
+		5497B30A197D4BE100E582CD /* LeftPanelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftPanelViewController.h; sourceTree = "<group>"; };
+		5497B30B197D4BE100E582CD /* LeftPanelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftPanelViewController.m; sourceTree = "<group>"; };
 		5497B30E197D50C100E582CD /* User.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = User.png; sourceTree = "<group>"; };
 		5497B310197D698F00E582CD /* CleanerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CleanerCell.xib; sourceTree = "<group>"; };
 		5497B312197D6E3F00E582CD /* cat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cat.png; sourceTree = "<group>"; };
@@ -146,6 +148,8 @@
 		5497D81B19819E0A00E582CD /* Plus@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Plus@2x.png"; sourceTree = "<group>"; };
 		5497D81E1981EC2F00E582CD /* DormCatCustomer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DormCatCustomer.h; sourceTree = "<group>"; };
 		5497D81F1981EC2F00E582CD /* DormCatCustomer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DormCatCustomer.m; sourceTree = "<group>"; };
+		5497D8211982636A00E582CD /* metallic_ring.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = metallic_ring.png; sourceTree = "<group>"; };
+		5497D823198268E700E582CD /* ring_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ring_white.png; sourceTree = "<group>"; };
 		DB5B183C043640F78CCA199C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -218,8 +222,8 @@
 				5497B2C6197D496500E582CD /* TabBarViewController.h */,
 				5497B2C7197D496500E582CD /* TabBarViewController.m */,
 				5497B323197EB06200E582CD /* Macros.h */,
-				5497B30A197D4BE100E582CD /* RightPanelViewController.h */,
-				5497B30B197D4BE100E582CD /* RightPanelViewController.m */,
+				5497B30A197D4BE100E582CD /* LeftPanelViewController.h */,
+				5497B30B197D4BE100E582CD /* LeftPanelViewController.m */,
 				5497B318197D744500E582CD /* CleanerCell.h */,
 				5497B319197D744500E582CD /* CleanerCell.m */,
 				5497B31B197D824400E582CD /* Cleaner.h */,
@@ -270,7 +274,7 @@
 			isa = PBXGroup;
 			children = (
 				5497B306197D4BA600E582CD /* TabBarViewController.xib */,
-				5497B308197D4BBC00E582CD /* RightPanelViewController.xib */,
+				5497B308197D4BBC00E582CD /* LeftPanelViewController.xib */,
 				5497B310197D698F00E582CD /* CleanerCell.xib */,
 				5497B327197EB43700E582CD /* CleanersViewController.xib */,
 				5497B329197EED5100E582CD /* OrderViewController.xib */,
@@ -283,12 +287,14 @@
 		5497B30D197D50C100E582CD /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				5497D823198268E700E582CD /* ring_white.png */,
 				5497D817198198F600E582CD /* fonts */,
 				5497D80F1981949400E582CD /* bathroom.png */,
 				5497D8101981949400E582CD /* oven.png */,
 				5497D8111981949400E582CD /* sofa.png */,
 				5497D7EB1981568000E582CD /* paw_down.png */,
 				5497D7EC1981568000E582CD /* paw_up.png */,
+				5497D8211982636A00E582CD /* metallic_ring.png */,
 				5497D7E71980B01C00E582CD /* Paw_Print_White.png */,
 				5497D7DE19809F3400E582CD /* kitchen.png */,
 				5497D815198196D400E582CD /* label_bathroom.png */,
@@ -412,6 +418,7 @@
 				5497D7E81980B01C00E582CD /* Paw_Print_White.png in Resources */,
 				5497B317197D70D500E582CD /* star.png in Resources */,
 				5497D7CA197F47E800E582CD /* LogInViewController.xib in Resources */,
+				5497D8221982636A00E582CD /* metallic_ring.png in Resources */,
 				5497B315197D6F9300E582CD /* heart.png in Resources */,
 				5497D7C6197F3D0D00E582CD /* postcard.png in Resources */,
 				5497D80E1981941500E582CD /* bed.png in Resources */,
@@ -423,7 +430,7 @@
 				5497D7D41980254000E582CD /* google.png in Resources */,
 				5497B322197EABF200E582CD /* Favorites.png in Resources */,
 				5497D7DA19804A5900E582CD /* BigHeart.png in Resources */,
-				5497B309197D4BBC00E582CD /* RightPanelViewController.xib in Resources */,
+				5497B309197D4BBC00E582CD /* LeftPanelViewController.xib in Resources */,
 				5497D8131981949400E582CD /* oven.png in Resources */,
 				5497D8141981949400E582CD /* sofa.png in Resources */,
 				5497D7C0197F38A200E582CD /* paw.png in Resources */,
@@ -434,6 +441,7 @@
 				5497D7D6198044C100E582CD /* credit.png in Resources */,
 				5497D7C8197F40EF00E582CD /* pussy.png in Resources */,
 				5497B32A197EED5100E582CD /* OrderViewController.xib in Resources */,
+				5497D824198268E700E582CD /* ring_white.png in Resources */,
 				5497B307197D4BA600E582CD /* TabBarViewController.xib in Resources */,
 				5497D7D81980462600E582CD /* Rocket.png in Resources */,
 				5497D81D19819E0A00E582CD /* Plus@2x.png in Resources */,
@@ -490,7 +498,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5497B30C197D4BE100E582CD /* RightPanelViewController.m in Sources */,
+				5497B30C197D4BE100E582CD /* LeftPanelViewController.m in Sources */,
 				5497B31D197D824400E582CD /* Cleaner.m in Sources */,
 				5497B326197EB3DF00E582CD /* CleanersViewController.m in Sources */,
 				5497B32D197EEE1400E582CD /* OrderViewController.m in Sources */,

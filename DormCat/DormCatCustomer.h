@@ -9,7 +9,9 @@
 #import <Foundation/Foundation.h>
 
 @interface DormCatCustomer : NSObject
-@property (nonatomic,strong) NSString * username;
+@property (nonatomic,strong) NSString * user_id;
+@property (nonatomic,strong) NSString * first_name;
+@property (nonatomic,strong) NSString * last_name;
 @property (nonatomic,strong) NSString * profile_image;
 @property (nonatomic,strong) NSString * email;
 @property (nonatomic,strong) NSString * address;

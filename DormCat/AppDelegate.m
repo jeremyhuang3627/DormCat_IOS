@@ -13,8 +13,8 @@
 #import "GooglePlus/GooglePlus.h"
 #import <FacebookSDK/FacebookSDK.h>
 #import "LogInViewController.h"
-#import "RightPanelViewController.h"
-
+#import "LeftPanelViewController.h"
+#import "DormCatCustomer.h"
 #define FACEBOOK_SCHEME @"fb244051742471725"
 #define GOOGLE_SCHEME @"dorminate.dormcat"
 
@@ -91,7 +91,8 @@
         if([[self.window.rootViewController presentedViewController] isEqual:self.logInViewController]){
             [self.window.rootViewController dismissViewControllerAnimated:YES completion:NULL];
         }
-        [self makeRequestForUserData];
+        NSString *fbAccessToken = [[[FBSession activeSession] accessTokenData] accessToken];
+        NSLog(@"access token %@",fbAccessToken);
         return;
     }
     
@@ -147,15 +148,15 @@
 {
     self.dynamicsDrawerViewController = [MSDynamicsDrawerViewController new];
     self.dynamicsDrawerViewController.delegate = self;
-    RightPanelViewController *rightPaneViewController = [RightPanelViewController new];
-    [self.dynamicsDrawerViewController setDrawerViewController:rightPaneViewController forDirection:MSDynamicsDrawerDirectionRight];
+    LeftPanelViewController *leftPaneViewController = [LeftPanelViewController new];
+    [self.dynamicsDrawerViewController setDrawerViewController:leftPaneViewController forDirection:MSDynamicsDrawerDirectionLeft];
     //adding pane view controller
     TabBarViewController * tabBarViewController = [TabBarViewController new];
     tabBarViewController.dynamicsDrawerViewController = self.dynamicsDrawerViewController;
     self.dynamicsDrawerViewController.paneViewController = tabBarViewController;
     MSDynamicsDrawerShadowStyler *shadowStyler = [MSDynamicsDrawerShadowStyler new];
     shadowStyler.shadowOpacity = 0.5;
-    [self.dynamicsDrawerViewController addStyler:shadowStyler forDirection:MSDynamicsDrawerDirectionRight];
+    [self.dynamicsDrawerViewController addStyler:shadowStyler forDirection:MSDynamicsDrawerDirectionLeft];
     self.window.rootViewController = self.dynamicsDrawerViewController;
 }
 
@@ -189,6 +190,13 @@
         if (!error) {
             // Success! Include your code to handle the results here
             NSLog(@"user info: %@", result);
+            self.leftPanelViewController.customer.email = [result objectForKey:@"email"];
+            self.leftPanelViewController.customer.first_name = [result objectForKey:@"first_name"];
+            self.leftPanelViewController.customer.last_name = [result objectForKey:@"last_name"];
+            self.leftPanelViewController.customer.user_id = [result objectForKey:@"id"];
+         /*   [self insertOrUpdateUser:self.rightPanelViewController.customer completion:^(DormCatCustomer * customer){
+                self.rightPanelViewController.customer = customer;
+            }]; */
         } else {
             // An error occurred, we need to handle the error
             // See: https://developers.facebook.com/docs/ios/errors
@@ -196,6 +204,9 @@
         }
     }];
 }
+
+
+
 
 - (void)applicationWillResignActive:(UIApplication *)application
 {

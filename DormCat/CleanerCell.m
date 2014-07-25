@@ -23,7 +23,7 @@
 - (void)awakeFromNib
 {
     // Initialization code
-    self.viewForBaselineLayout.backgroundColor = UIColorFromRGB(0xf9f8f8);
+    self.viewForBaselineLayout.backgroundColor = UIColorFromRGB(BACKGROUND_COLOR);
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
