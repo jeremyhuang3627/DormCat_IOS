@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5490C7F01984992200FD0A1F /* visa.png in Resources */ = {isa = PBXBuildFile; fileRef = 5490C7EF1984992200FD0A1F /* visa.png */; };
+		5490C7F31985A63600FD0A1F /* AddPaymentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5490C7F21985A63600FD0A1F /* AddPaymentViewController.m */; };
+		5490C7F71985AE9F00FD0A1F /* AddPaymentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5490C7F61985AE9F00FD0A1F /* AddPaymentViewController.xib */; };
+		5490C7FA1985E35700FD0A1F /* CardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5490C7F91985E35700FD0A1F /* CardCell.m */; };
 		5497B290197D488000E582CD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5497B28F197D488000E582CD /* Foundation.framework */; };
 		5497B292197D488000E582CD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5497B291197D488000E582CD /* CoreGraphics.framework */; };
 		5497B294197D488000E582CD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5497B293197D488000E582CD /* UIKit.framework */; };
@@ -50,7 +54,7 @@
 		5497D7DC198057EC00E582CD /* facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = 5497D7DB198057EC00E582CD /* facebook.png */; };
 		5497D7E219809F3400E582CD /* kitchen.png in Resources */ = {isa = PBXBuildFile; fileRef = 5497D7DE19809F3400E582CD /* kitchen.png */; };
 		5497D7E81980B01C00E582CD /* Paw_Print_White.png in Resources */ = {isa = PBXBuildFile; fileRef = 5497D7E71980B01C00E582CD /* Paw_Print_White.png */; };
-		5497D7EA19813C0500E582CD /* OrderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5497D7E919813C0500E582CD /* OrderCell.xib */; };
+		5497D7EA19813C0500E582CD /* CardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5497D7E919813C0500E582CD /* CardCell.xib */; };
 		5497D7ED1981568000E582CD /* paw_down.png in Resources */ = {isa = PBXBuildFile; fileRef = 5497D7EB1981568000E582CD /* paw_down.png */; };
 		5497D7EE1981568000E582CD /* paw_up.png in Resources */ = {isa = PBXBuildFile; fileRef = 5497D7EC1981568000E582CD /* paw_up.png */; };
 		5497D80E1981941500E582CD /* bed.png in Resources */ = {isa = PBXBuildFile; fileRef = 5497D80D1981941500E582CD /* bed.png */; };
@@ -64,6 +68,22 @@
 		5497D8201981EC2F00E582CD /* DormCatCustomer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5497D81F1981EC2F00E582CD /* DormCatCustomer.m */; };
 		5497D8221982636A00E582CD /* metallic_ring.png in Resources */ = {isa = PBXBuildFile; fileRef = 5497D8211982636A00E582CD /* metallic_ring.png */; };
 		5497D824198268E700E582CD /* ring_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 5497D823198268E700E582CD /* ring_white.png */; };
+		5497D82D19832DEE00E582CD /* AccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5497D82B19832DEE00E582CD /* AccountViewController.m */; };
+		5497D82E19832DEE00E582CD /* AccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5497D82C19832DEE00E582CD /* AccountViewController.xib */; };
+		5497D83119833ECF00E582CD /* PaymentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5497D83019833ECF00E582CD /* PaymentViewController.m */; };
+		5497D833198341B000E582CD /* PaymentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5497D832198341B000E582CD /* PaymentViewController.xib */; };
+		5497D83C1983427900E582CD /* SavedCleanersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5497D83A1983427900E582CD /* SavedCleanersViewController.m */; };
+		5497D83D1983427900E582CD /* SavedCleanersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5497D83B1983427900E582CD /* SavedCleanersViewController.xib */; };
+		5497D841198342AC00E582CD /* BecomeCleanerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5497D83F198342AC00E582CD /* BecomeCleanerViewController.m */; };
+		5497D842198342AC00E582CD /* BecomeCleanerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5497D840198342AC00E582CD /* BecomeCleanerViewController.xib */; };
+		5497D8441983E3CD00E582CD /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 5497D8431983E3CD00E582CD /* background.png */; };
+		5497D8461983E54800E582CD /* user_mini.png in Resources */ = {isa = PBXBuildFile; fileRef = 5497D8451983E54800E582CD /* user_mini.png */; };
+		5497D8491983F08F00E582CD /* Order.m in Sources */ = {isa = PBXBuildFile; fileRef = 5497D8481983F08F00E582CD /* Order.m */; };
+		5497D8521983F4F400E582CD /* TimePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5497D8501983F4F400E582CD /* TimePickerViewController.m */; };
+		5497D8531983F4F400E582CD /* TimePickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5497D8511983F4F400E582CD /* TimePickerViewController.xib */; };
+		5497D8561983FB4200E582CD /* Next.png in Resources */ = {isa = PBXBuildFile; fileRef = 5497D8541983FB4200E582CD /* Next.png */; };
+		5497D8571983FB4200E582CD /* Previous.png in Resources */ = {isa = PBXBuildFile; fileRef = 5497D8551983FB4200E582CD /* Previous.png */; };
+		5497D8591984199900E582CD /* table.png in Resources */ = {isa = PBXBuildFile; fileRef = 5497D8581984199900E582CD /* table.png */; };
 		BE8049E0DA3642E79F89FA81 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DB5B183C043640F78CCA199C /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -79,6 +99,12 @@
 
 /* Begin PBXFileReference section */
 		4092F214C20549F6B4ECCF8A /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		5490C7EF1984992200FD0A1F /* visa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = visa.png; sourceTree = "<group>"; };
+		5490C7F11985A63600FD0A1F /* AddPaymentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddPaymentViewController.h; sourceTree = "<group>"; };
+		5490C7F21985A63600FD0A1F /* AddPaymentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddPaymentViewController.m; sourceTree = "<group>"; };
+		5490C7F61985AE9F00FD0A1F /* AddPaymentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddPaymentViewController.xib; sourceTree = "<group>"; };
+		5490C7F81985E35700FD0A1F /* CardCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardCell.h; sourceTree = "<group>"; };
+		5490C7F91985E35700FD0A1F /* CardCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardCell.m; sourceTree = "<group>"; };
 		5497B28C197D488000E582CD /* DormCat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DormCat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5497B28F197D488000E582CD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5497B291197D488000E582CD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -135,7 +161,7 @@
 		5497D7DB198057EC00E582CD /* facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facebook.png; sourceTree = "<group>"; };
 		5497D7DE19809F3400E582CD /* kitchen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kitchen.png; sourceTree = "<group>"; };
 		5497D7E71980B01C00E582CD /* Paw_Print_White.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Paw_Print_White.png; sourceTree = "<group>"; };
-		5497D7E919813C0500E582CD /* OrderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrderCell.xib; sourceTree = "<group>"; };
+		5497D7E919813C0500E582CD /* CardCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardCell.xib; sourceTree = "<group>"; };
 		5497D7EB1981568000E582CD /* paw_down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = paw_down.png; sourceTree = "<group>"; };
 		5497D7EC1981568000E582CD /* paw_up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = paw_up.png; sourceTree = "<group>"; };
 		5497D80D1981941500E582CD /* bed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bed.png; sourceTree = "<group>"; };
@@ -150,6 +176,28 @@
 		5497D81F1981EC2F00E582CD /* DormCatCustomer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DormCatCustomer.m; sourceTree = "<group>"; };
 		5497D8211982636A00E582CD /* metallic_ring.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = metallic_ring.png; sourceTree = "<group>"; };
 		5497D823198268E700E582CD /* ring_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ring_white.png; sourceTree = "<group>"; };
+		5497D82A19832DEE00E582CD /* AccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountViewController.h; sourceTree = "<group>"; };
+		5497D82B19832DEE00E582CD /* AccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountViewController.m; sourceTree = "<group>"; };
+		5497D82C19832DEE00E582CD /* AccountViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AccountViewController.xib; sourceTree = "<group>"; };
+		5497D82F19833ECF00E582CD /* PaymentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaymentViewController.h; sourceTree = "<group>"; };
+		5497D83019833ECF00E582CD /* PaymentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaymentViewController.m; sourceTree = "<group>"; };
+		5497D832198341B000E582CD /* PaymentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PaymentViewController.xib; sourceTree = "<group>"; };
+		5497D8391983427900E582CD /* SavedCleanersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SavedCleanersViewController.h; sourceTree = "<group>"; };
+		5497D83A1983427900E582CD /* SavedCleanersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SavedCleanersViewController.m; sourceTree = "<group>"; };
+		5497D83B1983427900E582CD /* SavedCleanersViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SavedCleanersViewController.xib; sourceTree = "<group>"; };
+		5497D83E198342AC00E582CD /* BecomeCleanerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BecomeCleanerViewController.h; sourceTree = "<group>"; };
+		5497D83F198342AC00E582CD /* BecomeCleanerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BecomeCleanerViewController.m; sourceTree = "<group>"; };
+		5497D840198342AC00E582CD /* BecomeCleanerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BecomeCleanerViewController.xib; sourceTree = "<group>"; };
+		5497D8431983E3CD00E582CD /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		5497D8451983E54800E582CD /* user_mini.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user_mini.png; sourceTree = "<group>"; };
+		5497D8471983F08F00E582CD /* Order.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Order.h; sourceTree = "<group>"; };
+		5497D8481983F08F00E582CD /* Order.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Order.m; sourceTree = "<group>"; };
+		5497D84F1983F4F400E582CD /* TimePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimePickerViewController.h; sourceTree = "<group>"; };
+		5497D8501983F4F400E582CD /* TimePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimePickerViewController.m; sourceTree = "<group>"; };
+		5497D8511983F4F400E582CD /* TimePickerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TimePickerViewController.xib; sourceTree = "<group>"; };
+		5497D8541983FB4200E582CD /* Next.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Next.png; sourceTree = "<group>"; };
+		5497D8551983FB4200E582CD /* Previous.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Previous.png; sourceTree = "<group>"; };
+		5497D8581984199900E582CD /* table.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = table.png; sourceTree = "<group>"; };
 		DB5B183C043640F78CCA199C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -222,6 +270,8 @@
 				5497B2C6197D496500E582CD /* TabBarViewController.h */,
 				5497B2C7197D496500E582CD /* TabBarViewController.m */,
 				5497B323197EB06200E582CD /* Macros.h */,
+				5497D83E198342AC00E582CD /* BecomeCleanerViewController.h */,
+				5497D83F198342AC00E582CD /* BecomeCleanerViewController.m */,
 				5497B30A197D4BE100E582CD /* LeftPanelViewController.h */,
 				5497B30B197D4BE100E582CD /* LeftPanelViewController.m */,
 				5497B318197D744500E582CD /* CleanerCell.h */,
@@ -237,6 +287,20 @@
 				5497D7CC197F480500E582CD /* LogInViewController.m */,
 				5497D81E1981EC2F00E582CD /* DormCatCustomer.h */,
 				5497D81F1981EC2F00E582CD /* DormCatCustomer.m */,
+				5497D82A19832DEE00E582CD /* AccountViewController.h */,
+				5497D82B19832DEE00E582CD /* AccountViewController.m */,
+				5497D82F19833ECF00E582CD /* PaymentViewController.h */,
+				5497D83019833ECF00E582CD /* PaymentViewController.m */,
+				5497D8391983427900E582CD /* SavedCleanersViewController.h */,
+				5497D83A1983427900E582CD /* SavedCleanersViewController.m */,
+				5497D8471983F08F00E582CD /* Order.h */,
+				5497D8481983F08F00E582CD /* Order.m */,
+				5497D84F1983F4F400E582CD /* TimePickerViewController.h */,
+				5497D8501983F4F400E582CD /* TimePickerViewController.m */,
+				5490C7F11985A63600FD0A1F /* AddPaymentViewController.h */,
+				5490C7F21985A63600FD0A1F /* AddPaymentViewController.m */,
+				5490C7F81985E35700FD0A1F /* CardCell.h */,
+				5490C7F91985E35700FD0A1F /* CardCell.m */,
 			);
 			path = DormCat;
 			sourceTree = "<group>";
@@ -277,9 +341,15 @@
 				5497B308197D4BBC00E582CD /* LeftPanelViewController.xib */,
 				5497B310197D698F00E582CD /* CleanerCell.xib */,
 				5497B327197EB43700E582CD /* CleanersViewController.xib */,
+				5497D82C19832DEE00E582CD /* AccountViewController.xib */,
 				5497B329197EED5100E582CD /* OrderViewController.xib */,
+				5497D83B1983427900E582CD /* SavedCleanersViewController.xib */,
 				5497D7C9197F47E800E582CD /* LogInViewController.xib */,
-				5497D7E919813C0500E582CD /* OrderCell.xib */,
+				5497D8511983F4F400E582CD /* TimePickerViewController.xib */,
+				5497D7E919813C0500E582CD /* CardCell.xib */,
+				5497D832198341B000E582CD /* PaymentViewController.xib */,
+				5497D840198342AC00E582CD /* BecomeCleanerViewController.xib */,
+				5490C7F61985AE9F00FD0A1F /* AddPaymentViewController.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -292,6 +362,12 @@
 				5497D80F1981949400E582CD /* bathroom.png */,
 				5497D8101981949400E582CD /* oven.png */,
 				5497D8111981949400E582CD /* sofa.png */,
+				5497D8541983FB4200E582CD /* Next.png */,
+				5490C7EF1984992200FD0A1F /* visa.png */,
+				5497D8551983FB4200E582CD /* Previous.png */,
+				5497D8581984199900E582CD /* table.png */,
+				5497D8431983E3CD00E582CD /* background.png */,
+				5497D8451983E54800E582CD /* user_mini.png */,
 				5497D7EB1981568000E582CD /* paw_down.png */,
 				5497D7EC1981568000E582CD /* paw_up.png */,
 				5497D8211982636A00E582CD /* metallic_ring.png */,
@@ -408,12 +484,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5497D7EA19813C0500E582CD /* OrderCell.xib in Resources */,
+				5497D7EA19813C0500E582CD /* CardCell.xib in Resources */,
+				5497D833198341B000E582CD /* PaymentViewController.xib in Resources */,
 				5497D8121981949400E582CD /* bathroom.png in Resources */,
 				5497B31F197D95FA00E582CD /* location50X50.png in Resources */,
 				5497D819198198F600E582CD /* bebas.ttf in Resources */,
 				5497B339197F1A4E00E582CD /* Paw_Print@2x.png in Resources */,
 				5497B30F197D50C100E582CD /* User.png in Resources */,
+				5497D83D1983427900E582CD /* SavedCleanersViewController.xib in Resources */,
+				5497D8461983E54800E582CD /* user_mini.png in Resources */,
 				5497D7E219809F3400E582CD /* kitchen.png in Resources */,
 				5497D7E81980B01C00E582CD /* Paw_Print_White.png in Resources */,
 				5497B317197D70D500E582CD /* star.png in Resources */,
@@ -421,12 +500,18 @@
 				5497D8221982636A00E582CD /* metallic_ring.png in Resources */,
 				5497B315197D6F9300E582CD /* heart.png in Resources */,
 				5497D7C6197F3D0D00E582CD /* postcard.png in Resources */,
+				5497D8441983E3CD00E582CD /* background.png in Resources */,
+				5497D8561983FB4200E582CD /* Next.png in Resources */,
 				5497D80E1981941500E582CD /* bed.png in Resources */,
+				5497D82E19832DEE00E582CD /* AccountViewController.xib in Resources */,
 				5497D7ED1981568000E582CD /* paw_down.png in Resources */,
+				5497D8571983FB4200E582CD /* Previous.png in Resources */,
 				5497B2A8197D488000E582CD /* Images.xcassets in Resources */,
 				5497D816198196D400E582CD /* label_bathroom.png in Resources */,
 				5497B313197D6E3F00E582CD /* cat.png in Resources */,
 				5497D81C19819E0A00E582CD /* Minus@2x.png in Resources */,
+				5497D8531983F4F400E582CD /* TimePickerViewController.xib in Resources */,
+				5490C7F71985AE9F00FD0A1F /* AddPaymentViewController.xib in Resources */,
 				5497D7D41980254000E582CD /* google.png in Resources */,
 				5497B322197EABF200E582CD /* Favorites.png in Resources */,
 				5497D7DA19804A5900E582CD /* BigHeart.png in Resources */,
@@ -434,8 +519,10 @@
 				5497D8131981949400E582CD /* oven.png in Resources */,
 				5497D8141981949400E582CD /* sofa.png in Resources */,
 				5497D7C0197F38A200E582CD /* paw.png in Resources */,
+				5497D8591984199900E582CD /* table.png in Resources */,
 				5497B311197D698F00E582CD /* CleanerCell.xib in Resources */,
 				5497B328197EB43700E582CD /* CleanersViewController.xib in Resources */,
+				5497D842198342AC00E582CD /* BecomeCleanerViewController.xib in Resources */,
 				5497D7EE1981568000E582CD /* paw_up.png in Resources */,
 				5497D7DC198057EC00E582CD /* facebook.png in Resources */,
 				5497D7D6198044C100E582CD /* credit.png in Resources */,
@@ -444,6 +531,7 @@
 				5497D824198268E700E582CD /* ring_white.png in Resources */,
 				5497B307197D4BA600E582CD /* TabBarViewController.xib in Resources */,
 				5497D7D81980462600E582CD /* Rocket.png in Resources */,
+				5490C7F01984992200FD0A1F /* visa.png in Resources */,
 				5497D81D19819E0A00E582CD /* Plus@2x.png in Resources */,
 				5497B29A197D488000E582CD /* InfoPlist.strings in Resources */,
 				5497B32F197EF59700E582CD /* Calendar.png in Resources */,
@@ -500,13 +588,21 @@
 			files = (
 				5497B30C197D4BE100E582CD /* LeftPanelViewController.m in Sources */,
 				5497B31D197D824400E582CD /* Cleaner.m in Sources */,
+				5497D841198342AC00E582CD /* BecomeCleanerViewController.m in Sources */,
+				5497D8521983F4F400E582CD /* TimePickerViewController.m in Sources */,
 				5497B326197EB3DF00E582CD /* CleanersViewController.m in Sources */,
+				5497D83119833ECF00E582CD /* PaymentViewController.m in Sources */,
 				5497B32D197EEE1400E582CD /* OrderViewController.m in Sources */,
 				5497B2C8197D496500E582CD /* TabBarViewController.m in Sources */,
+				5497D82D19832DEE00E582CD /* AccountViewController.m in Sources */,
+				5490C7FA1985E35700FD0A1F /* CardCell.m in Sources */,
 				5497B2A0197D488000E582CD /* AppDelegate.m in Sources */,
+				5497D83C1983427900E582CD /* SavedCleanersViewController.m in Sources */,
 				5497D8201981EC2F00E582CD /* DormCatCustomer.m in Sources */,
 				5497B31A197D744500E582CD /* CleanerCell.m in Sources */,
 				5497B29C197D488000E582CD /* main.m in Sources */,
+				5497D8491983F08F00E582CD /* Order.m in Sources */,
+				5490C7F31985A63600FD0A1F /* AddPaymentViewController.m in Sources */,
 				5497D7CD197F480500E582CD /* LogInViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

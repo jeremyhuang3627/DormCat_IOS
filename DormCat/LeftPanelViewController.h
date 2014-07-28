@@ -13,7 +13,11 @@
 
 @interface LeftPanelViewController : UIViewController
 @property (weak, nonatomic) MSDynamicsDrawerViewController *dynamicsDrawerViewController;
-@property (nonatomic,strong) IBOutlet UILabel * logInLabel;
-@property (nonatomic,strong) IBOutlet UILabel * signUpTextField;
-@property (nonatomic,strong) DormCatCustomer *customer;
+@property (strong, nonatomic) IBOutlet UIButton *homeBtn;
+@property (strong, nonatomic) IBOutlet UIButton *accountBtn;
+@property (strong, nonatomic) IBOutlet UIButton *paymentBtn;
+@property (strong, nonatomic) IBOutlet UIButton *addressBtn;
+@property (strong, nonatomic) IBOutlet UIButton *savedCleanersBtn;
+@property (strong, nonatomic) IBOutlet UIButton *becomeCleanerBtn;
+@property (strong, nonatomic) IBOutlet UIButton *logOutBtn;
 @end

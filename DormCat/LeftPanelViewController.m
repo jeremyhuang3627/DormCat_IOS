@@ -10,18 +10,28 @@
 #import "LeftPanelViewController.h"
 #import "macros.h"
 #import "DormCatCustomer.h"
+#import "AccountViewController.h"
+#import "MSDynamicsDrawerViewController.h"
+#import "PaymentViewController.h"
+#import "SavedCleanersViewController.h"
+#import "BecomeCleanerViewController.h"
 
 @interface LeftPanelViewController ()
 
 @end
 
-@implementation LeftPanelViewController
+@implementation LeftPanelViewController{
+    AccountViewController *accountViewController;
+    PaymentViewController *paymentViewController;
+    SavedCleanersViewController *savedCleanersViewController;
+    BecomeCleanerViewController *becomeCleanerViewController;
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.customer = [DormCatCustomer new];
+        
     }
     return self;
 }
@@ -29,10 +39,23 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.view.backgroundColor = UIColorFromRGB(BACKGROUND_COLOR);
+    NSString * padding = @"          ";
+    [self.homeBtn setTitle:[padding stringByAppendingString:@"Home"] forState:UIControlStateNormal];
+    [self.accountBtn setTitle:[padding stringByAppendingString:@"My Account"] forState:UIControlStateNormal];
+    [self.paymentBtn setTitle:[padding stringByAppendingString:@"Payment"] forState:UIControlStateNormal];
+    [self.addressBtn setTitle:[padding stringByAppendingString:@"Address"] forState:UIControlStateNormal];
+    [self.savedCleanersBtn setTitle:[padding stringByAppendingString:@"Saved Cleaners"] forState:UIControlStateNormal];
+    [self.becomeCleanerBtn setTitle:[padding stringByAppendingString:@"Become A Cleaner"] forState:UIControlStateNormal];
+    [self.logOutBtn setTitle:[padding stringByAppendingString:@"Log Out"] forState:UIControlStateNormal];
+    self.homeBtn.contentHorizontalAlignment =
+    self.becomeCleanerBtn.contentHorizontalAlignment =
+    self.logOutBtn.contentHorizontalAlignment =
+    self.accountBtn.contentHorizontalAlignment =
+    self.paymentBtn.contentHorizontalAlignment =
+    self.addressBtn.contentHorizontalAlignment =
+    self.savedCleanersBtn.contentHorizontalAlignment =
+    UIControlContentHorizontalAlignmentLeft;
     // Do any additional setup after loading the view.
-    [self.logInLabel setText:[NSString stringWithFormat:@"Log in to awesomeness"]];
-    [self.signUpTextField setText:[NSString stringWithFormat:@"Sign Up for more\n kitty power"]];
 }
 
 - (void)didReceiveMemoryWarning
@@ -51,6 +74,37 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+-(IBAction)pushViewController:(id)sender{
+    NSLog(@"pushViewController tapped");
+    switch([sender tag]){
+        {case 0:
+            NSLog(@"pushing home view controller");
+            AppDelegate * appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+           [self.dynamicsDrawerViewController setPaneViewController:appDelegate.tabBarViewController animated:YES completion:NULL];
+            break;}
+        {case 1:
+            NSLog(@"pushing account view controller");
+            accountViewController = [AccountViewController new];
+            [self.dynamicsDrawerViewController setPaneViewController:accountViewController animated:YES completion:NULL];
+            break;}
+        {case 2:
+            paymentViewController = [PaymentViewController new];
+            [self.dynamicsDrawerViewController setPaneViewController:paymentViewController animated:YES completion:NULL];
+            break;
+            }
+        {case 3:
+            savedCleanersViewController = [SavedCleanersViewController new];
+            [self.dynamicsDrawerViewController setPaneViewController:savedCleanersViewController animated:YES completion:NULL];
+            break;
+        }
+        {case 4:
+            becomeCleanerViewController = [BecomeCleanerViewController new];
+            [self.dynamicsDrawerViewController setPaneViewController:becomeCleanerViewController animated:YES completion:NULL];
+            break;
+        }
+    }
+}
 
 -(IBAction)logout:(id)sender
 {

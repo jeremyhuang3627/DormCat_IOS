@@ -1,19 +1,38 @@
 PODS:
   - Bolts (1.1.0)
+  - Braintree (3.1.0):
+    - Braintree/api
+    - Braintree/Drop-In
+    - Braintree/PayPal
+    - Braintree/UI
+  - Braintree/api (3.1.0)
+  - Braintree/Drop-In (3.1.0):
+    - Braintree/api
+    - Braintree/PayPal
+    - Braintree/UI
+  - Braintree/PayPal (3.1.0):
+    - Braintree/api
+    - Braintree/UI
+  - Braintree/UI (3.1.0)
   - Facebook-iOS-SDK (3.16.1):
     - Bolts
   - google-plus-ios-sdk (1.7.0)
+  - MBProgressHUD (0.8)
   - MSDynamicsDrawerViewController (1.5.1)
 
 DEPENDENCIES:
+  - Braintree
   - Facebook-iOS-SDK
   - google-plus-ios-sdk
+  - MBProgressHUD (~> 0.8)
   - MSDynamicsDrawerViewController
 
 SPEC CHECKSUMS:
   Bolts: 91c2af8eae1d44e1dd75946a5b0ae04a43ea43e4
+  Braintree: 6eb00376a2c13b93466da83d6ffe62383c78aee8
   Facebook-iOS-SDK: 594f0e2398fe62b0a44b6f7ae113c7795cfabfa4
   google-plus-ios-sdk: f613bd712196b435ecc098eed75afb3364bca177
+  MBProgressHUD: c356980b0cd097f19acec959b49dca5eb8ec31be
   MSDynamicsDrawerViewController: 0002059480a4b5ddde7eafbafb958a79a9b0ffaf
 
 COCOAPODS: 0.33.1

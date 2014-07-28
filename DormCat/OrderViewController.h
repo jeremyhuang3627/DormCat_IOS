@@ -9,6 +9,10 @@
 #import <UIKit/UIKit.h>
 @class TabBarViewController;
 
+@protocol OrderViewDelegate <NSObject>
+-(void)placedOrder;
+@end
+
 @interface OrderViewController : UIViewController
 @property (nonatomic, weak) IBOutlet UIView *topBar;
 @property (nonatomic, weak) TabBarViewController * dcTabBarViewController;
@@ -18,4 +22,5 @@
 @property (nonatomic,strong) IBOutlet UILabel * kitchenNumberLabel;
 @property (nonatomic,strong) IBOutlet UILabel * totalAmountLabel;
 @property (nonatomic,strong) IBOutlet UILabel * bedRoomLabel;
+@property (nonatomic,weak) id<OrderViewDelegate> delegate;
 @end

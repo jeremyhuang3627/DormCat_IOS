@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "OrderViewController.h"
 @class MSDynamicsDrawerViewController;
 
-@interface TabBarViewController : UIViewController <UITabBarDelegate>
+@interface TabBarViewController : UIViewController <UITabBarDelegate,OrderViewDelegate>
 @property (nonatomic, weak) MSDynamicsDrawerViewController *dynamicsDrawerViewController;
 - (void)dynamicsDrawerRevealRightBarButtonItemTapped:(id)sender;
 @end

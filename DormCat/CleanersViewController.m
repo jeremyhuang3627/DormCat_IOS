@@ -26,7 +26,6 @@ static NSString *const CleanerCellIdentifier = @"CleanerCell";
         // Custom initialization
         cleaners = [[NSMutableArray alloc] init];
         for(int i=0;i<3;i++){
-            NSLog(@"initializing cleaner %d",i);
             Cleaner * a_cleaner = [[Cleaner alloc] init];
             a_cleaner.userName = [NSString stringWithFormat:@"Cleaner%d",i];
             a_cleaner.introduction = [NSString stringWithFormat:@"I am fast and efficient"];
@@ -34,7 +33,6 @@ static NSString *const CleanerCellIdentifier = @"CleanerCell";
             a_cleaner.rating = [NSNumber numberWithDouble:i/10];
             [cleaners addObject:a_cleaner];
         }
-        NSLog(@"cleaners count %d",[cleaners count]);
         self.tabBarItem = [[UITabBarItem alloc ]initWithTitle:@"Cleaners" image:[UIImage imageNamed:@"User.png"] tag:0];
     }
     return self;

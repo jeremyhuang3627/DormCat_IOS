@@ -15,6 +15,8 @@
 #import "LogInViewController.h"
 #import "LeftPanelViewController.h"
 #import "DormCatCustomer.h"
+#import "Macros.h"
+
 #define FACEBOOK_SCHEME @"fb244051742471725"
 #define GOOGLE_SCHEME @"dorminate.dormcat"
 
@@ -30,7 +32,6 @@
     [self createDynamicDrawer];
     // Override point for customization after application launch.
     if (FBSession.activeSession.state == FBSessionStateCreatedTokenLoaded) {
-        NSLog(@"Found a cached session");
         [FBSession openActiveSessionWithReadPermissions:@[@"public_profile"]
                                            allowLoginUI:NO
                                       completionHandler:^(FBSession *session, FBSessionState state, NSError *error) {
@@ -38,10 +39,8 @@
                                       }];
         // If there's no cached session, we will show a login button
     } else {
-        NSLog(@"showing login view");
         [self showLogInView];
     }
-   
     return YES;
 }
 
@@ -57,7 +56,6 @@
                       sourceApplication:sourceApplication
                              annotation:annotation];
     }
-
     if ([[url scheme] isEqualToString:FACEBOOK_SCHEME])
         return [FBSession.activeSession handleOpenURL:url];
     return NO;
@@ -92,7 +90,7 @@
             [self.window.rootViewController dismissViewControllerAnimated:YES completion:NULL];
         }
         NSString *fbAccessToken = [[[FBSession activeSession] accessTokenData] accessToken];
-        NSLog(@"access token %@",fbAccessToken);
+        [self serverFBLogin:fbAccessToken];
         return;
     }
     
@@ -124,9 +122,6 @@
                 alertTitle = @"Session Error";
                 alertText = @"Your current session is no longer valid. Please log in again.";
                 [self showMessage:alertText withTitle:alertTitle];
-                
-                // For simplicity, here we just show a generic message for all other errors
-                // You can learn how to handle other errors using our guide: https://developers.facebook.com/docs/ios/errors
             } else {
                 //Get more error information from the error
                 NSDictionary *errorInformation = [[[error.userInfo objectForKey:@"com.facebook.sdk:ParsedJSONResponseKey"] objectForKey:@"body"] objectForKey:@"error"];
@@ -144,14 +139,37 @@
     }
 }
 
+-(void)serverFBLogin:(NSString *)token
+{
+    NSString *fbAccessToken = [[[FBSession activeSession] accessTokenData] accessToken];
+    NSURL *url = [NSURL URLWithString:[DEV_HOST stringByAppendingString:[NSString stringWithFormat:@"/facebook_login"]]];
+    NSString * postString = [NSString stringWithFormat:@"token=%@",fbAccessToken];
+    NSMutableURLRequest *req = [[NSMutableURLRequest alloc] initWithURL:url];
+    [req setHTTPMethod:@"POST"];
+    [req setHTTPBody:[postString dataUsingEncoding:NSUTF8StringEncoding]];
+    NSOperationQueue * q = [NSOperationQueue new];
+    [NSURLConnection sendAsynchronousRequest:req queue:q completionHandler:^(NSURLResponse * response, NSData * data,NSError * error){
+        NSDictionary * user = [NSJSONSerialization
+                                   JSONObjectWithData:data
+                                   options:kNilOptions
+                                   error:nil];
+        NSData *user_data = [NSKeyedArchiver archivedDataWithRootObject:user];
+        [[NSUserDefaults standardUserDefaults] setObject:user_data forKey:@"USERINFO"];
+    }];
+}
+
+#pragma mark UI configuration
+
 -(void)createDynamicDrawer
 {
     self.dynamicsDrawerViewController = [MSDynamicsDrawerViewController new];
     self.dynamicsDrawerViewController.delegate = self;
     LeftPanelViewController *leftPaneViewController = [LeftPanelViewController new];
+    self.leftPanelViewController = leftPaneViewController;
+    self.leftPanelViewController.dynamicsDrawerViewController = self.dynamicsDrawerViewController;
     [self.dynamicsDrawerViewController setDrawerViewController:leftPaneViewController forDirection:MSDynamicsDrawerDirectionLeft];
     //adding pane view controller
-    TabBarViewController * tabBarViewController = [TabBarViewController new];
+    TabBarViewController * tabBarViewController = self.tabBarViewController = [TabBarViewController new];
     tabBarViewController.dynamicsDrawerViewController = self.dynamicsDrawerViewController;
     self.dynamicsDrawerViewController.paneViewController = tabBarViewController;
     MSDynamicsDrawerShadowStyler *shadowStyler = [MSDynamicsDrawerShadowStyler new];
@@ -183,30 +201,6 @@
                       cancelButtonTitle:@"OK!"
                       otherButtonTitles:nil] show];
 }
-
--(void)makeRequestForUserData
-{
-    [FBRequestConnection startForMeWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
-        if (!error) {
-            // Success! Include your code to handle the results here
-            NSLog(@"user info: %@", result);
-            self.leftPanelViewController.customer.email = [result objectForKey:@"email"];
-            self.leftPanelViewController.customer.first_name = [result objectForKey:@"first_name"];
-            self.leftPanelViewController.customer.last_name = [result objectForKey:@"last_name"];
-            self.leftPanelViewController.customer.user_id = [result objectForKey:@"id"];
-         /*   [self insertOrUpdateUser:self.rightPanelViewController.customer completion:^(DormCatCustomer * customer){
-                self.rightPanelViewController.customer = customer;
-            }]; */
-        } else {
-            // An error occurred, we need to handle the error
-            // See: https://developers.facebook.com/docs/ios/errors
-            NSLog(@"error %@", error.description);
-        }
-    }];
-}
-
-
-
 
 - (void)applicationWillResignActive:(UIApplication *)application
 {

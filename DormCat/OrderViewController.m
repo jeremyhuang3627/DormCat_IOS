@@ -8,6 +8,7 @@
 
 #import "OrderViewController.h"
 #import "macros.h"
+#import "Order.h"
 
 @interface OrderViewController ()
 @end
@@ -17,6 +18,7 @@
     int bathRoomNumber;
     int livingRoomNumber;
     int kitchenNumber;
+    double totalAmount;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -29,6 +31,7 @@
         bathRoomNumber = 1;
         livingRoomNumber = 0;
         kitchenNumber = 0;
+        [self updateTotal];
     }
     return self;
 }
@@ -64,8 +67,19 @@
 
 -(void)updateTotal
 {
-    int totalAmount = (bedRoomNumber + bathRoomNumber + livingRoomNumber + kitchenNumber) * PRICE_PER_ROOM;
-    [self.totalAmountLabel setText:[NSString stringWithFormat:@"Total : $%d",totalAmount]];
+    totalAmount = (double)(bedRoomNumber + bathRoomNumber + livingRoomNumber + kitchenNumber) * PRICE_PER_ROOM;
+    [self.totalAmountLabel setText:[NSString stringWithFormat:@"Total : $%d",(int)totalAmount]];
+}
+
+-(IBAction)done
+{
+    NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setInteger:bedRoomNumber forKey:@"BEDROOMNUMBER"];
+    [defaults setInteger:bathRoomNumber forKey:@"BATHROOMNUMBER"];
+    [defaults setInteger:livingRoomNumber forKey:@"LIVINGROOMNUMBER"];
+    [defaults setInteger:kitchenNumber forKey:@"KITCHENNUMBER"];
+    [defaults setDouble:totalAmount forKey:@"TOTALAMOUNT"];
+    [self.delegate placedOrder];
 }
 
 -(IBAction)increaseBedRoomNumber:(id)sender{

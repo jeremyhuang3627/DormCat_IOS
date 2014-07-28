@@ -57,7 +57,6 @@ static NSString * const kClientId = @"278164520085-tmneqopjgctitr14408qpra9ilsu4
                                        allowLoginUI:YES
                                   completionHandler:
      ^(FBSession *session, FBSessionState state, NSError *error) {
-         
          // Retrieve the app delegate
          AppDelegate* appDelegate = [UIApplication sharedApplication].delegate;
          // Call the app delegate's sessionStateChanged:state:error method to handle session state changes

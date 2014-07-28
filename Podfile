@@ -1,3 +1,5 @@
 pod 'MSDynamicsDrawerViewController'
 pod 'Facebook-iOS-SDK'
 pod 'google-plus-ios-sdk'
+pod 'Braintree'
+pod 'MBProgressHUD', '~> 0.8'

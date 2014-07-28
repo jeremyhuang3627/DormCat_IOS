@@ -12,9 +12,11 @@
 #import "OrderViewController.h"
 #import "Macros.h"
 #import "LogInViewController.h"
+#import "TimePickerViewController.h"
 
 @interface TabBarViewController ()
 @property (nonatomic, strong) UITabBarController *tabBarController;
+@property (nonatomic, strong) UINavigationController *navigationController;
 @end
 
 @implementation TabBarViewController
@@ -26,10 +28,14 @@
         self.tabBarController = [UITabBarController new];
         CleanersViewController * cleanersViewController = [CleanersViewController new];
         OrderViewController * orderViewController = [OrderViewController new];
+        orderViewController.delegate = self;
         cleanersViewController.dcTabBarViewController = orderViewController.dcTabBarViewController = self;
         NSArray * viewControllers = [NSArray arrayWithObjects:orderViewController,cleanersViewController,nil];
         self.tabBarController.viewControllers = viewControllers;
-        [self.view addSubview:self.tabBarController.view];
+        self.navigationController = [[UINavigationController alloc] initWithRootViewController:self.tabBarController];
+        [self.navigationController.view addSubview:self.tabBarController.view];
+        [self.view addSubview:self.navigationController.view];
+        [self.navigationController setNavigationBarHidden:YES animated:YES];
     }
     return self;
 }
@@ -75,4 +81,12 @@
     return self.view.frame;
 }
 
+#pragma mark OrderViewDelegate methods
+
+-(void)placedOrder
+{
+    NSLog(@"pushing time picker");
+    TimePickerViewController * timePickerViewController = [TimePickerViewController new];
+    [self.navigationController pushViewController:timePickerViewController animated:YES];
+}
 @end

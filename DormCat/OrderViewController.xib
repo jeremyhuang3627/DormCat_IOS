@@ -20,7 +20,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bed.png" translatesAutoresizingMaskIntoConstraints="NO" id="R7N-JM-zOV">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="table.png" translatesAutoresizingMaskIntoConstraints="NO" id="R7N-JM-zOV">
                     <rect key="frame" x="20" y="73" width="90" height="90"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
@@ -44,9 +44,12 @@
                         <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="done" destination="-1" eventType="touchUpInside" id="chF-df-OKp"/>
+                    </connections>
                 </button>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Total: 32" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XGj-Or-P09">
-                    <rect key="frame" x="110" y="22" width="100" height="25"/>
+                    <rect key="frame" x="112" y="22" width="97" height="25"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="18"/>
                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -197,9 +200,9 @@
     <resources>
         <image name="Minus.png" width="25" height="25"/>
         <image name="Plus.png" width="25" height="25"/>
-        <image name="bathroom.png" width="200" height="200"/>
-        <image name="bed.png" width="200" height="200"/>
-        <image name="oven.png" width="200" height="200"/>
-        <image name="sofa.png" width="200" height="200"/>
+        <image name="bathroom.png" width="100" height="100"/>
+        <image name="oven.png" width="100" height="100"/>
+        <image name="sofa.png" width="100" height="100"/>
+        <image name="table.png" width="100" height="100"/>
     </resources>
 </document>
