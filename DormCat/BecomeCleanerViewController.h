@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface BecomeCleanerViewController : UIViewController <UIImagePickerControllerDelegate,UINavigationControllerDelegate>
-
+@property (nonatomic,strong) IBOutlet UILabel * successLabel;
 @end

@@ -11,6 +11,22 @@
 		5490C7F31985A63600FD0A1F /* AddPaymentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5490C7F21985A63600FD0A1F /* AddPaymentViewController.m */; };
 		5490C7F71985AE9F00FD0A1F /* AddPaymentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5490C7F61985AE9F00FD0A1F /* AddPaymentViewController.xib */; };
 		5490C7FA1985E35700FD0A1F /* CardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5490C7F91985E35700FD0A1F /* CardCell.m */; };
+		5490C7FE1987253000FD0A1F /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = 5490C7FD1987253000FD0A1F /* camera.png */; };
+		5490C80019872A5900FD0A1F /* User.png in Resources */ = {isa = PBXBuildFile; fileRef = 5490C7FF19872A5900FD0A1F /* User.png */; };
+		5490C80219873A0300FD0A1F /* AccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5490C80119873A0300FD0A1F /* AccountViewController.xib */; };
+		5490C8041987DD1800FD0A1F /* textField_Border.png in Resources */ = {isa = PBXBuildFile; fileRef = 5490C8031987DD1800FD0A1F /* textField_Border.png */; };
+		5490C8071987F46A00FD0A1F /* NSMutableDictionary+NSMutableDictionaryToJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 5490C8061987F46A00FD0A1F /* NSMutableDictionary+NSMutableDictionaryToJSON.m */; };
+		5490C80B198823CE00FD0A1F /* SubmittedOrdersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5490C809198823CE00FD0A1F /* SubmittedOrdersViewController.m */; };
+		5490C80C198823CE00FD0A1F /* SubmittedOrdersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5490C80A198823CE00FD0A1F /* SubmittedOrdersViewController.xib */; };
+		5490C80E1988246000FD0A1F /* OrderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5490C80D1988246000FD0A1F /* OrderCell.xib */; };
+		5490C810198924FD00FD0A1F /* order.png in Resources */ = {isa = PBXBuildFile; fileRef = 5490C80F198924FD00FD0A1F /* order.png */; };
+		5490C813198926C200FD0A1F /* OrderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5490C812198926C200FD0A1F /* OrderCell.m */; };
+		5490C817198943CC00FD0A1F /* NoOrderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5490C815198943CC00FD0A1F /* NoOrderCell.m */; };
+		5490C818198943CC00FD0A1F /* NoOrderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5490C816198943CC00FD0A1F /* NoOrderCell.xib */; };
+		5490C81C19895EF800FD0A1F /* TakenOrdersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5490C81A19895EF800FD0A1F /* TakenOrdersViewController.m */; };
+		5490C81D19895EF800FD0A1F /* TakenOrdersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5490C81B19895EF800FD0A1F /* TakenOrdersViewController.xib */; };
+		5490C8211989714500FD0A1F /* AllOrdersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5490C81F1989714500FD0A1F /* AllOrdersViewController.m */; };
+		5490C8221989714500FD0A1F /* AllOrdersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5490C8201989714500FD0A1F /* AllOrdersViewController.xib */; };
 		5497B290197D488000E582CD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5497B28F197D488000E582CD /* Foundation.framework */; };
 		5497B292197D488000E582CD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5497B291197D488000E582CD /* CoreGraphics.framework */; };
 		5497B294197D488000E582CD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5497B293197D488000E582CD /* UIKit.framework */; };
@@ -69,15 +85,11 @@
 		5497D8221982636A00E582CD /* metallic_ring.png in Resources */ = {isa = PBXBuildFile; fileRef = 5497D8211982636A00E582CD /* metallic_ring.png */; };
 		5497D824198268E700E582CD /* ring_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 5497D823198268E700E582CD /* ring_white.png */; };
 		5497D82D19832DEE00E582CD /* AccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5497D82B19832DEE00E582CD /* AccountViewController.m */; };
-		5497D82E19832DEE00E582CD /* AccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5497D82C19832DEE00E582CD /* AccountViewController.xib */; };
 		5497D83119833ECF00E582CD /* PaymentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5497D83019833ECF00E582CD /* PaymentViewController.m */; };
 		5497D833198341B000E582CD /* PaymentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5497D832198341B000E582CD /* PaymentViewController.xib */; };
-		5497D83C1983427900E582CD /* SavedCleanersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5497D83A1983427900E582CD /* SavedCleanersViewController.m */; };
-		5497D83D1983427900E582CD /* SavedCleanersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5497D83B1983427900E582CD /* SavedCleanersViewController.xib */; };
 		5497D841198342AC00E582CD /* BecomeCleanerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5497D83F198342AC00E582CD /* BecomeCleanerViewController.m */; };
 		5497D842198342AC00E582CD /* BecomeCleanerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5497D840198342AC00E582CD /* BecomeCleanerViewController.xib */; };
 		5497D8441983E3CD00E582CD /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 5497D8431983E3CD00E582CD /* background.png */; };
-		5497D8461983E54800E582CD /* user_mini.png in Resources */ = {isa = PBXBuildFile; fileRef = 5497D8451983E54800E582CD /* user_mini.png */; };
 		5497D8491983F08F00E582CD /* Order.m in Sources */ = {isa = PBXBuildFile; fileRef = 5497D8481983F08F00E582CD /* Order.m */; };
 		5497D8521983F4F400E582CD /* TimePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5497D8501983F4F400E582CD /* TimePickerViewController.m */; };
 		5497D8531983F4F400E582CD /* TimePickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5497D8511983F4F400E582CD /* TimePickerViewController.xib */; };
@@ -105,6 +117,28 @@
 		5490C7F61985AE9F00FD0A1F /* AddPaymentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddPaymentViewController.xib; sourceTree = "<group>"; };
 		5490C7F81985E35700FD0A1F /* CardCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardCell.h; sourceTree = "<group>"; };
 		5490C7F91985E35700FD0A1F /* CardCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardCell.m; sourceTree = "<group>"; };
+		5490C7FD1987253000FD0A1F /* camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera.png; sourceTree = "<group>"; };
+		5490C7FF19872A5900FD0A1F /* User.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = User.png; sourceTree = "<group>"; };
+		5490C80119873A0300FD0A1F /* AccountViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AccountViewController.xib; sourceTree = "<group>"; };
+		5490C8031987DD1800FD0A1F /* textField_Border.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = textField_Border.png; sourceTree = "<group>"; };
+		5490C8051987F46A00FD0A1F /* NSMutableDictionary+NSMutableDictionaryToJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+NSMutableDictionaryToJSON.h"; sourceTree = "<group>"; };
+		5490C8061987F46A00FD0A1F /* NSMutableDictionary+NSMutableDictionaryToJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+NSMutableDictionaryToJSON.m"; sourceTree = "<group>"; };
+		5490C808198823CE00FD0A1F /* SubmittedOrdersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubmittedOrdersViewController.h; sourceTree = "<group>"; };
+		5490C809198823CE00FD0A1F /* SubmittedOrdersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubmittedOrdersViewController.m; sourceTree = "<group>"; };
+		5490C80A198823CE00FD0A1F /* SubmittedOrdersViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SubmittedOrdersViewController.xib; sourceTree = "<group>"; };
+		5490C80D1988246000FD0A1F /* OrderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrderCell.xib; sourceTree = "<group>"; };
+		5490C80F198924FD00FD0A1F /* order.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = order.png; sourceTree = "<group>"; };
+		5490C811198926C200FD0A1F /* OrderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderCell.h; sourceTree = "<group>"; };
+		5490C812198926C200FD0A1F /* OrderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderCell.m; sourceTree = "<group>"; };
+		5490C814198943CC00FD0A1F /* NoOrderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoOrderCell.h; sourceTree = "<group>"; };
+		5490C815198943CC00FD0A1F /* NoOrderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoOrderCell.m; sourceTree = "<group>"; };
+		5490C816198943CC00FD0A1F /* NoOrderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoOrderCell.xib; sourceTree = "<group>"; };
+		5490C81919895EF800FD0A1F /* TakenOrdersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TakenOrdersViewController.h; sourceTree = "<group>"; };
+		5490C81A19895EF800FD0A1F /* TakenOrdersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TakenOrdersViewController.m; sourceTree = "<group>"; };
+		5490C81B19895EF800FD0A1F /* TakenOrdersViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TakenOrdersViewController.xib; sourceTree = "<group>"; };
+		5490C81E1989714500FD0A1F /* AllOrdersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllOrdersViewController.h; sourceTree = "<group>"; };
+		5490C81F1989714500FD0A1F /* AllOrdersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllOrdersViewController.m; sourceTree = "<group>"; };
+		5490C8201989714500FD0A1F /* AllOrdersViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AllOrdersViewController.xib; sourceTree = "<group>"; };
 		5497B28C197D488000E582CD /* DormCat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DormCat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5497B28F197D488000E582CD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5497B291197D488000E582CD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -178,18 +212,13 @@
 		5497D823198268E700E582CD /* ring_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ring_white.png; sourceTree = "<group>"; };
 		5497D82A19832DEE00E582CD /* AccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountViewController.h; sourceTree = "<group>"; };
 		5497D82B19832DEE00E582CD /* AccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountViewController.m; sourceTree = "<group>"; };
-		5497D82C19832DEE00E582CD /* AccountViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AccountViewController.xib; sourceTree = "<group>"; };
 		5497D82F19833ECF00E582CD /* PaymentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaymentViewController.h; sourceTree = "<group>"; };
 		5497D83019833ECF00E582CD /* PaymentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaymentViewController.m; sourceTree = "<group>"; };
 		5497D832198341B000E582CD /* PaymentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PaymentViewController.xib; sourceTree = "<group>"; };
-		5497D8391983427900E582CD /* SavedCleanersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SavedCleanersViewController.h; sourceTree = "<group>"; };
-		5497D83A1983427900E582CD /* SavedCleanersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SavedCleanersViewController.m; sourceTree = "<group>"; };
-		5497D83B1983427900E582CD /* SavedCleanersViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SavedCleanersViewController.xib; sourceTree = "<group>"; };
 		5497D83E198342AC00E582CD /* BecomeCleanerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BecomeCleanerViewController.h; sourceTree = "<group>"; };
 		5497D83F198342AC00E582CD /* BecomeCleanerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BecomeCleanerViewController.m; sourceTree = "<group>"; };
 		5497D840198342AC00E582CD /* BecomeCleanerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BecomeCleanerViewController.xib; sourceTree = "<group>"; };
 		5497D8431983E3CD00E582CD /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
-		5497D8451983E54800E582CD /* user_mini.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user_mini.png; sourceTree = "<group>"; };
 		5497D8471983F08F00E582CD /* Order.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Order.h; sourceTree = "<group>"; };
 		5497D8481983F08F00E582CD /* Order.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Order.m; sourceTree = "<group>"; };
 		5497D84F1983F4F400E582CD /* TimePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimePickerViewController.h; sourceTree = "<group>"; };
@@ -291,8 +320,6 @@
 				5497D82B19832DEE00E582CD /* AccountViewController.m */,
 				5497D82F19833ECF00E582CD /* PaymentViewController.h */,
 				5497D83019833ECF00E582CD /* PaymentViewController.m */,
-				5497D8391983427900E582CD /* SavedCleanersViewController.h */,
-				5497D83A1983427900E582CD /* SavedCleanersViewController.m */,
 				5497D8471983F08F00E582CD /* Order.h */,
 				5497D8481983F08F00E582CD /* Order.m */,
 				5497D84F1983F4F400E582CD /* TimePickerViewController.h */,
@@ -301,6 +328,19 @@
 				5490C7F21985A63600FD0A1F /* AddPaymentViewController.m */,
 				5490C7F81985E35700FD0A1F /* CardCell.h */,
 				5490C7F91985E35700FD0A1F /* CardCell.m */,
+				5490C8051987F46A00FD0A1F /* NSMutableDictionary+NSMutableDictionaryToJSON.h */,
+				5490C8061987F46A00FD0A1F /* NSMutableDictionary+NSMutableDictionaryToJSON.m */,
+				5490C808198823CE00FD0A1F /* SubmittedOrdersViewController.h */,
+				5490C809198823CE00FD0A1F /* SubmittedOrdersViewController.m */,
+				5490C811198926C200FD0A1F /* OrderCell.h */,
+				5490C812198926C200FD0A1F /* OrderCell.m */,
+				5490C814198943CC00FD0A1F /* NoOrderCell.h */,
+				5490C815198943CC00FD0A1F /* NoOrderCell.m */,
+				5490C81919895EF800FD0A1F /* TakenOrdersViewController.h */,
+				5490C81A19895EF800FD0A1F /* TakenOrdersViewController.m */,
+				5490C81E1989714500FD0A1F /* AllOrdersViewController.h */,
+				5490C81F1989714500FD0A1F /* AllOrdersViewController.m */,
+				5490C8201989714500FD0A1F /* AllOrdersViewController.xib */,
 			);
 			path = DormCat;
 			sourceTree = "<group>";
@@ -341,15 +381,18 @@
 				5497B308197D4BBC00E582CD /* LeftPanelViewController.xib */,
 				5497B310197D698F00E582CD /* CleanerCell.xib */,
 				5497B327197EB43700E582CD /* CleanersViewController.xib */,
-				5497D82C19832DEE00E582CD /* AccountViewController.xib */,
 				5497B329197EED5100E582CD /* OrderViewController.xib */,
-				5497D83B1983427900E582CD /* SavedCleanersViewController.xib */,
 				5497D7C9197F47E800E582CD /* LogInViewController.xib */,
 				5497D8511983F4F400E582CD /* TimePickerViewController.xib */,
 				5497D7E919813C0500E582CD /* CardCell.xib */,
 				5497D832198341B000E582CD /* PaymentViewController.xib */,
 				5497D840198342AC00E582CD /* BecomeCleanerViewController.xib */,
 				5490C7F61985AE9F00FD0A1F /* AddPaymentViewController.xib */,
+				5490C80A198823CE00FD0A1F /* SubmittedOrdersViewController.xib */,
+				5490C81B19895EF800FD0A1F /* TakenOrdersViewController.xib */,
+				5490C816198943CC00FD0A1F /* NoOrderCell.xib */,
+				5490C80119873A0300FD0A1F /* AccountViewController.xib */,
+				5490C80D1988246000FD0A1F /* OrderCell.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -357,17 +400,19 @@
 		5497B30D197D50C100E582CD /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				5490C7FD1987253000FD0A1F /* camera.png */,
 				5497D823198268E700E582CD /* ring_white.png */,
 				5497D817198198F600E582CD /* fonts */,
 				5497D80F1981949400E582CD /* bathroom.png */,
+				5490C80F198924FD00FD0A1F /* order.png */,
 				5497D8101981949400E582CD /* oven.png */,
 				5497D8111981949400E582CD /* sofa.png */,
 				5497D8541983FB4200E582CD /* Next.png */,
 				5490C7EF1984992200FD0A1F /* visa.png */,
 				5497D8551983FB4200E582CD /* Previous.png */,
 				5497D8581984199900E582CD /* table.png */,
+				5490C8031987DD1800FD0A1F /* textField_Border.png */,
 				5497D8431983E3CD00E582CD /* background.png */,
-				5497D8451983E54800E582CD /* user_mini.png */,
 				5497D7EB1981568000E582CD /* paw_down.png */,
 				5497D7EC1981568000E582CD /* paw_up.png */,
 				5497D8211982636A00E582CD /* metallic_ring.png */,
@@ -379,6 +424,7 @@
 				5497D7DB198057EC00E582CD /* facebook.png */,
 				5497D7D919804A5900E582CD /* BigHeart.png */,
 				5497D80D1981941500E582CD /* bed.png */,
+				5490C7FF19872A5900FD0A1F /* User.png */,
 				5497D7D71980462600E582CD /* Rocket.png */,
 				5497D7D5198044C100E582CD /* credit.png */,
 				5497D7D31980254000E582CD /* google.png */,
@@ -455,6 +501,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Huang Jie";
 				TargetAttributes = {
+					5497B28B197D488000E582CD = {
+						DevelopmentTeam = LTJWU4TRG6;
+					};
 					5497B2AC197D488000E582CD = {
 						TestTargetID = 5497B28B197D488000E582CD;
 					};
@@ -490,22 +539,23 @@
 				5497B31F197D95FA00E582CD /* location50X50.png in Resources */,
 				5497D819198198F600E582CD /* bebas.ttf in Resources */,
 				5497B339197F1A4E00E582CD /* Paw_Print@2x.png in Resources */,
+				5490C7FE1987253000FD0A1F /* camera.png in Resources */,
 				5497B30F197D50C100E582CD /* User.png in Resources */,
-				5497D83D1983427900E582CD /* SavedCleanersViewController.xib in Resources */,
-				5497D8461983E54800E582CD /* user_mini.png in Resources */,
 				5497D7E219809F3400E582CD /* kitchen.png in Resources */,
 				5497D7E81980B01C00E582CD /* Paw_Print_White.png in Resources */,
 				5497B317197D70D500E582CD /* star.png in Resources */,
 				5497D7CA197F47E800E582CD /* LogInViewController.xib in Resources */,
+				5490C81D19895EF800FD0A1F /* TakenOrdersViewController.xib in Resources */,
 				5497D8221982636A00E582CD /* metallic_ring.png in Resources */,
 				5497B315197D6F9300E582CD /* heart.png in Resources */,
 				5497D7C6197F3D0D00E582CD /* postcard.png in Resources */,
 				5497D8441983E3CD00E582CD /* background.png in Resources */,
 				5497D8561983FB4200E582CD /* Next.png in Resources */,
+				5490C80019872A5900FD0A1F /* User.png in Resources */,
 				5497D80E1981941500E582CD /* bed.png in Resources */,
-				5497D82E19832DEE00E582CD /* AccountViewController.xib in Resources */,
 				5497D7ED1981568000E582CD /* paw_down.png in Resources */,
 				5497D8571983FB4200E582CD /* Previous.png in Resources */,
+				5490C80E1988246000FD0A1F /* OrderCell.xib in Resources */,
 				5497B2A8197D488000E582CD /* Images.xcassets in Resources */,
 				5497D816198196D400E582CD /* label_bathroom.png in Resources */,
 				5497B313197D6E3F00E582CD /* cat.png in Resources */,
@@ -517,8 +567,12 @@
 				5497D7DA19804A5900E582CD /* BigHeart.png in Resources */,
 				5497B309197D4BBC00E582CD /* LeftPanelViewController.xib in Resources */,
 				5497D8131981949400E582CD /* oven.png in Resources */,
+				5490C818198943CC00FD0A1F /* NoOrderCell.xib in Resources */,
 				5497D8141981949400E582CD /* sofa.png in Resources */,
+				5490C810198924FD00FD0A1F /* order.png in Resources */,
+				5490C8041987DD1800FD0A1F /* textField_Border.png in Resources */,
 				5497D7C0197F38A200E582CD /* paw.png in Resources */,
+				5490C80219873A0300FD0A1F /* AccountViewController.xib in Resources */,
 				5497D8591984199900E582CD /* table.png in Resources */,
 				5497B311197D698F00E582CD /* CleanerCell.xib in Resources */,
 				5497B328197EB43700E582CD /* CleanersViewController.xib in Resources */,
@@ -532,9 +586,11 @@
 				5497B307197D4BA600E582CD /* TabBarViewController.xib in Resources */,
 				5497D7D81980462600E582CD /* Rocket.png in Resources */,
 				5490C7F01984992200FD0A1F /* visa.png in Resources */,
+				5490C80C198823CE00FD0A1F /* SubmittedOrdersViewController.xib in Resources */,
 				5497D81D19819E0A00E582CD /* Plus@2x.png in Resources */,
 				5497B29A197D488000E582CD /* InfoPlist.strings in Resources */,
 				5497B32F197EF59700E582CD /* Calendar.png in Resources */,
+				5490C8221989714500FD0A1F /* AllOrdersViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -586,19 +642,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5490C8071987F46A00FD0A1F /* NSMutableDictionary+NSMutableDictionaryToJSON.m in Sources */,
 				5497B30C197D4BE100E582CD /* LeftPanelViewController.m in Sources */,
 				5497B31D197D824400E582CD /* Cleaner.m in Sources */,
+				5490C81C19895EF800FD0A1F /* TakenOrdersViewController.m in Sources */,
 				5497D841198342AC00E582CD /* BecomeCleanerViewController.m in Sources */,
 				5497D8521983F4F400E582CD /* TimePickerViewController.m in Sources */,
 				5497B326197EB3DF00E582CD /* CleanersViewController.m in Sources */,
+				5490C817198943CC00FD0A1F /* NoOrderCell.m in Sources */,
+				5490C80B198823CE00FD0A1F /* SubmittedOrdersViewController.m in Sources */,
 				5497D83119833ECF00E582CD /* PaymentViewController.m in Sources */,
 				5497B32D197EEE1400E582CD /* OrderViewController.m in Sources */,
 				5497B2C8197D496500E582CD /* TabBarViewController.m in Sources */,
 				5497D82D19832DEE00E582CD /* AccountViewController.m in Sources */,
+				5490C8211989714500FD0A1F /* AllOrdersViewController.m in Sources */,
 				5490C7FA1985E35700FD0A1F /* CardCell.m in Sources */,
 				5497B2A0197D488000E582CD /* AppDelegate.m in Sources */,
-				5497D83C1983427900E582CD /* SavedCleanersViewController.m in Sources */,
 				5497D8201981EC2F00E582CD /* DormCatCustomer.m in Sources */,
+				5490C813198926C200FD0A1F /* OrderCell.m in Sources */,
 				5497B31A197D744500E582CD /* CleanerCell.m in Sources */,
 				5497B29C197D488000E582CD /* main.m in Sources */,
 				5497D8491983F08F00E582CD /* Order.m in Sources */,
@@ -721,10 +782,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DormCat/DormCat-Prefix.pch";
 				INFOPLIST_FILE = "DormCat/DormCat-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -735,10 +799,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DormCat/DormCat-Prefix.pch";
 				INFOPLIST_FILE = "DormCat/DormCat-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

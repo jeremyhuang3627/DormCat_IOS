@@ -13,8 +13,9 @@
 #import "AccountViewController.h"
 #import "MSDynamicsDrawerViewController.h"
 #import "PaymentViewController.h"
-#import "SavedCleanersViewController.h"
 #import "BecomeCleanerViewController.h"
+#import "SubmittedOrdersViewController.h"
+#import "TakenOrdersViewController.h"
 
 @interface LeftPanelViewController ()
 
@@ -23,8 +24,9 @@
 @implementation LeftPanelViewController{
     AccountViewController *accountViewController;
     PaymentViewController *paymentViewController;
-    SavedCleanersViewController *savedCleanersViewController;
     BecomeCleanerViewController *becomeCleanerViewController;
+    SubmittedOrdersViewController *submittedOrdersViewController;
+    TakenOrdersViewController *takenOrdersViewController;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -43,17 +45,17 @@
     [self.homeBtn setTitle:[padding stringByAppendingString:@"Home"] forState:UIControlStateNormal];
     [self.accountBtn setTitle:[padding stringByAppendingString:@"My Account"] forState:UIControlStateNormal];
     [self.paymentBtn setTitle:[padding stringByAppendingString:@"Payment"] forState:UIControlStateNormal];
-    [self.addressBtn setTitle:[padding stringByAppendingString:@"Address"] forState:UIControlStateNormal];
-    [self.savedCleanersBtn setTitle:[padding stringByAppendingString:@"Saved Cleaners"] forState:UIControlStateNormal];
+    [self.submittedOrdersBtn setTitle:[padding stringByAppendingString:@"Submitted Orders"] forState:UIControlStateNormal];
     [self.becomeCleanerBtn setTitle:[padding stringByAppendingString:@"Become A Cleaner"] forState:UIControlStateNormal];
+    [self.takenOrdersBtn setTitle:[padding stringByAppendingString:@"Taken Orders"] forState:UIControlStateNormal];
     [self.logOutBtn setTitle:[padding stringByAppendingString:@"Log Out"] forState:UIControlStateNormal];
     self.homeBtn.contentHorizontalAlignment =
     self.becomeCleanerBtn.contentHorizontalAlignment =
     self.logOutBtn.contentHorizontalAlignment =
     self.accountBtn.contentHorizontalAlignment =
     self.paymentBtn.contentHorizontalAlignment =
-    self.addressBtn.contentHorizontalAlignment =
-    self.savedCleanersBtn.contentHorizontalAlignment =
+    self.takenOrdersBtn.contentHorizontalAlignment =
+    self.submittedOrdersBtn.contentHorizontalAlignment =
     UIControlContentHorizontalAlignmentLeft;
     // Do any additional setup after loading the view.
 }
@@ -92,15 +94,20 @@
             paymentViewController = [PaymentViewController new];
             [self.dynamicsDrawerViewController setPaneViewController:paymentViewController animated:YES completion:NULL];
             break;
-            }
+        }
         {case 3:
-            savedCleanersViewController = [SavedCleanersViewController new];
-            [self.dynamicsDrawerViewController setPaneViewController:savedCleanersViewController animated:YES completion:NULL];
+            becomeCleanerViewController = [BecomeCleanerViewController new];
+            [self.dynamicsDrawerViewController setPaneViewController:becomeCleanerViewController animated:YES completion:NULL];
             break;
         }
         {case 4:
-            becomeCleanerViewController = [BecomeCleanerViewController new];
-            [self.dynamicsDrawerViewController setPaneViewController:becomeCleanerViewController animated:YES completion:NULL];
+            submittedOrdersViewController = [SubmittedOrdersViewController new];
+            [self.dynamicsDrawerViewController setPaneViewController:submittedOrdersViewController animated:YES completion:NULL];
+            break;
+        }
+        {case 5:
+            takenOrdersViewController = [TakenOrdersViewController new];
+            [self.dynamicsDrawerViewController setPaneViewController:takenOrdersViewController animated:YES completion:NULL];
             break;
         }
     }

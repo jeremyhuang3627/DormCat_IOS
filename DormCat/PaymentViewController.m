@@ -41,8 +41,8 @@ static NSString *const CardCellIdentifier = @"CardCell";
     [self.tableView setRowHeight:80];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    NSData * data = [defaults objectForKey:@"USERINFO"];
-    self.creditCards = [NSMutableArray arrayWithArray:[NSKeyedUnarchiver unarchiveObjectWithData:data][@"creditCards"]];
+    NSData * data = [defaults objectForKey:@"creditCards"];
+    self.creditCards = [NSMutableArray arrayWithArray:[NSKeyedUnarchiver unarchiveObjectWithData:data]];
     self.tableView.allowsMultipleSelectionDuringEditing = NO;
     showNoCardCell = YES;
 }
@@ -82,7 +82,13 @@ static NSString *const CardCellIdentifier = @"CardCell";
     }else{
         [cc.cardLabel setText:(NSString *)[self.creditCards objectAtIndex:indexPath.row][@"maskedNumber"]];
     }
+    cc.backgroundColor = UIColorFromRGB(FAINT_BLACK);
     return cc;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    // Do some stuff when the row is selected
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -102,6 +108,7 @@ static NSString *const CardCellIdentifier = @"CardCell";
 {
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     [self.creditCards removeObjectAtIndex:indexPath.row];
+    [[NSUserDefaults standardUserDefaults] setObject:[NSKeyedArchiver archivedDataWithRootObject:self.creditCards] forKey:@"creditCards"];
     NSURL *url = [NSURL URLWithString:[DEV_HOST stringByAppendingString:[NSString stringWithFormat:@"/remove_credit_card"]]];
     NSString * postString = [NSString stringWithFormat:@"token=%@",token];
     NSMutableURLRequest *req = [[NSMutableURLRequest alloc] initWithURL:url];
@@ -110,7 +117,7 @@ static NSString *const CardCellIdentifier = @"CardCell";
     NSOperationQueue * q = [NSOperationQueue new];
     [NSURLConnection sendAsynchronousRequest:req queue:q completionHandler:^(NSURLResponse * response, NSData * data,NSError * error){
         NSString * res = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-        if([res isEqualToString:@"SUCCESS"]){
+        if([res isEqualToString:SUCCESS_MSG]){
             dispatch_async(dispatch_get_main_queue(), ^{
                 [MBProgressHUD hideHUDForView:self.view animated:YES];
                 showNoCardCell = NO;
@@ -130,6 +137,7 @@ static NSString *const CardCellIdentifier = @"CardCell";
 -(void)addCardDictionary:(NSMutableDictionary *)card
 {
     [self.creditCards addObject:card];
+    [[NSUserDefaults standardUserDefaults] setObject:[NSKeyedArchiver archivedDataWithRootObject:self.creditCards] forKey:@"creditCards"];
     [self.tableView reloadData];
 }
 

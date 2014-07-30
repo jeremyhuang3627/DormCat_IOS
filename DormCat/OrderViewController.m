@@ -74,11 +74,11 @@
 -(IBAction)done
 {
     NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
-    [defaults setInteger:bedRoomNumber forKey:@"BEDROOMNUMBER"];
-    [defaults setInteger:bathRoomNumber forKey:@"BATHROOMNUMBER"];
-    [defaults setInteger:livingRoomNumber forKey:@"LIVINGROOMNUMBER"];
-    [defaults setInteger:kitchenNumber forKey:@"KITCHENNUMBER"];
-    [defaults setDouble:totalAmount forKey:@"TOTALAMOUNT"];
+    [defaults setInteger:bedRoomNumber forKey:BEDROOMNUMBER];
+    [defaults setInteger:bathRoomNumber forKey:BATHROOMNUMBER];
+    [defaults setInteger:livingRoomNumber forKey:LIVINGROOMNUMBER];
+    [defaults setInteger:kitchenNumber forKey:KITCHENNUMBER];
+    [defaults setDouble:totalAmount forKey:TOTALAMOUNT];
     [self.delegate placedOrder];
 }
 

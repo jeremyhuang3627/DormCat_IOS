@@ -81,7 +81,7 @@
                                NSOperationQueue * q = [NSOperationQueue new];
                                [NSURLConnection sendAsynchronousRequest:request queue:q completionHandler:^(NSURLResponse * response, NSData * data,NSError * error){
                                    NSString * res = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-                                   if([res isEqual:@"SUCCESS"] && !error){
+                                   if([res isEqual:SUCCESS_MSG] && !error){
                                        dispatch_async(dispatch_get_main_queue(), ^{
                                            [MBProgressHUD showHUDAddedTo:self.view animated:YES];
                                            [self.delegate addCardDictionary:cardDictionary];

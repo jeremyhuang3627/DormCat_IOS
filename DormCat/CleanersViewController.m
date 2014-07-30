@@ -33,7 +33,7 @@ static NSString *const CleanerCellIdentifier = @"CleanerCell";
             a_cleaner.rating = [NSNumber numberWithDouble:i/10];
             [cleaners addObject:a_cleaner];
         }
-        self.tabBarItem = [[UITabBarItem alloc ]initWithTitle:@"Cleaners" image:[UIImage imageNamed:@"User.png"] tag:0];
+        self.tabBarItem = [[UITabBarItem alloc ]initWithTitle:@"Cleaners" image:[UIImage imageNamed:@"paw.png"] tag:0];
     }
     return self;
 }
@@ -86,11 +86,6 @@ static NSString *const CleanerCellIdentifier = @"CleanerCell";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-}
-
-- (IBAction)btnMovePanelLeft:(id)sender
-{
-    [self.dcTabBarViewController dynamicsDrawerRevealRightBarButtonItemTapped:sender];
 }
 
 @end

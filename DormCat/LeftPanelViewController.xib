@@ -11,7 +11,8 @@
                 <outlet property="homeBtn" destination="PUH-aW-xtS" id="OBj-t3-Xtf"/>
                 <outlet property="logOutBtn" destination="CoH-dA-L3x" id="4hx-ur-Jal"/>
                 <outlet property="paymentBtn" destination="mCI-Rf-4wz" id="daY-hM-OTV"/>
-                <outlet property="savedCleanersBtn" destination="3Jf-Eo-pd5" id="8UJ-X9-u48"/>
+                <outlet property="submittedOrdersBtn" destination="0aT-g8-3wv" id="8Yl-Xy-TdV"/>
+                <outlet property="takenOrdersBtn" destination="aXT-Nv-rsk" id="MHL-2o-VA6"/>
                 <outlet property="view" destination="iN0-l3-epB" id="MBb-4F-nJC"/>
             </connections>
         </placeholder>
@@ -34,7 +35,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CoH-dA-L3x">
-                    <rect key="frame" x="0.0" y="381" width="320" height="30"/>
+                    <rect key="frame" x="0.0" y="440" width="320" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="15"/>
                     <state key="normal" title="Log Out">
@@ -45,8 +46,8 @@
                         <action selector="logout:" destination="-1" eventType="touchUpInside" id="Hyf-90-p9G"/>
                     </connections>
                 </button>
-                <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CIy-ti-SXD">
-                    <rect key="frame" x="0.0" y="317" width="320" height="50"/>
+                <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CIy-ti-SXD">
+                    <rect key="frame" x="0.0" y="266" width="320" height="50"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="15"/>
                     <state key="normal" title="Become A Cleaner">
@@ -55,6 +56,30 @@
                     </state>
                     <connections>
                         <action selector="pushViewController:" destination="-1" eventType="touchUpInside" id="fUD-5f-bRX"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0aT-g8-3wv">
+                    <rect key="frame" x="0.0" y="324" width="320" height="50"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="15"/>
+                    <state key="normal" title="Submitted Orders">
+                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="pushViewController:" destination="-1" eventType="touchUpInside" id="WRn-Ow-CQg"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aXT-Nv-rsk">
+                    <rect key="frame" x="0.0" y="382" width="320" height="50"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="15"/>
+                    <state key="normal" title="Taken Orders">
+                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="pushViewController:" destination="-1" eventType="touchUpInside" id="wL6-Ba-AGv"/>
                     </connections>
                 </button>
                 <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mCI-Rf-4wz">
@@ -91,18 +116,6 @@
                     </state>
                     <connections>
                         <action selector="pushViewController:" destination="-1" eventType="touchUpInside" id="TZ8-5x-J1C"/>
-                    </connections>
-                </button>
-                <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Jf-Eo-pd5">
-                    <rect key="frame" x="0.0" y="259" width="320" height="50"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="15"/>
-                    <state key="normal" title="Saved Cleaners">
-                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="pushViewController:" destination="-1" eventType="touchUpInside" id="7Wl-Kx-PZ7"/>
                     </connections>
                 </button>
             </subviews>

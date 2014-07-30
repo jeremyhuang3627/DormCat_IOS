@@ -31,6 +31,8 @@
     [self configureWindow];
     [self createDynamicDrawer];
     // Override point for customization after application launch.
+    [[UIApplication sharedApplication] registerForRemoteNotificationTypes:
+     (UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound | UIRemoteNotificationTypeAlert)];
     if (FBSession.activeSession.state == FBSessionStateCreatedTokenLoaded) {
         [FBSession openActiveSessionWithReadPermissions:@[@"public_profile"]
                                            allowLoginUI:NO
@@ -149,12 +151,23 @@
     [req setHTTPBody:[postString dataUsingEncoding:NSUTF8StringEncoding]];
     NSOperationQueue * q = [NSOperationQueue new];
     [NSURLConnection sendAsynchronousRequest:req queue:q completionHandler:^(NSURLResponse * response, NSData * data,NSError * error){
-        NSDictionary * user = [NSJSONSerialization
+        if(data){
+            NSDictionary * user = [NSJSONSerialization
                                    JSONObjectWithData:data
                                    options:kNilOptions
                                    error:nil];
-        NSData *user_data = [NSKeyedArchiver archivedDataWithRootObject:user];
-        [[NSUserDefaults standardUserDefaults] setObject:user_data forKey:@"USERINFO"];
+            NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
+            for(id key in user){
+                if([key isEqualToString:@"creditCards"]){
+                    NSData * creditCards = [NSKeyedArchiver archivedDataWithRootObject:user[key]];
+                    [defaults setObject:creditCards forKey:key];
+                }else{
+                    [defaults setObject:user[key] forKey:key];
+                    NSLog(@"key %@ val %@", key, user[key]);
+                }
+                
+            }
+        }
     }];
 }
 
@@ -202,6 +215,21 @@
                       otherButtonTitles:nil] show];
 }
 
+- (void)application:(UIApplication*)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData*)deviceToken
+{
+	NSLog(@"My token is: %@", deviceToken);
+}
+
+- (void)application:(UIApplication*)application didFailToRegisterForRemoteNotificationsWithError:(NSError*)error
+{
+	NSLog(@"Failed to get token, error: %@", error);
+}
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
+{
+    NSLog(@"did receive notification %@",userInfo);
+}
+
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -222,6 +250,8 @@
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    NSLog(@"did become active ");
+    
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application

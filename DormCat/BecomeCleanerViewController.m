@@ -72,30 +72,49 @@
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingImage:(UIImage *)image editingInfo:(NSDictionary *)editingInfo
 {
     NSLog(@"finished picking image");
-    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    NSURL * requestURL = [NSURL URLWithString:[DEV_HOST stringByAppendingString:@"/upload_id_image"]];
-    NSString * FileParam = @"id_image";
-    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
-    [request setHTTPMethod:@"POST"];
-    NSData *imageData = UIImageJPEGRepresentation(image, 1.0);
-    NSMutableData *body = [NSMutableData data];
-    [body appendData:[[NSString stringWithFormat:@"Content-Disposition: form-data; name=\"%@\"; filename=\"image.jpg\"\r\n", FileParam] dataUsingEncoding:NSUTF8StringEncoding]];
-    [body appendData:[@"Content-Type: image/jpeg\r\n\r\n"
-                      dataUsingEncoding:NSUTF8StringEncoding]];
-    [body appendData:imageData];
-    [request setHTTPBody:body];
-    
-    NSString *postLength = [NSString stringWithFormat:@"%d", [body length]];
-    [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
-    [request setURL:requestURL];
-    
-    NSOperationQueue * q = [NSOperationQueue new];
-    [NSURLConnection sendAsynchronousRequest:request queue:q completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
-        NSString * res = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-        NSLog(@"res %@",res);
-        dispatch_async(dispatch_get_main_queue(), ^{
-           [MBProgressHUD hideHUDForView:self.view animated:YES];
-        });
+    [self dismissViewControllerAnimated:YES completion:^{
+        [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+        NSURL * requestURL = [NSURL URLWithString:[DEV_HOST stringByAppendingString:@"/upload_id_image"]];
+        NSString * FileParam = @"id_image";
+        NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
+        [request setHTTPMethod:@"POST"];
+        NSString *contentType = [NSString stringWithFormat:@"multipart/form-data;"];
+        [request setValue:contentType forHTTPHeaderField: @"Content-Type"];
+        [request addValue:@"image/jpeg" forHTTPHeaderField:@"Content-Type"];
+        
+        CGSize newSize = CGSizeMake(320, 568);
+        UIGraphicsBeginImageContext(newSize);
+        [image drawInRect:CGRectMake(0,0,newSize.width,newSize.height)];
+        UIImage* newImage = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+        NSData *imageData = UIImageJPEGRepresentation(newImage, 1.0);
+       
+        NSMutableData *body = [NSMutableData data];
+        [body appendData:imageData];
+        [request setHTTPBody:body];
+        
+        NSString *postLength = [NSString stringWithFormat:@"%d", [body length]];
+        [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
+        [request setURL:requestURL];
+        
+        NSOperationQueue * q = [NSOperationQueue new];
+        [NSURLConnection sendAsynchronousRequest:request queue:q completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+            NSString * res = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+            NSLog(@"res %@",res);
+            if([res isEqualToString:SUCCESS_MSG]){
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [MBProgressHUD hideHUDForView:self.view animated:YES];
+                    [self.successLabel setText:@"You have successfully applied to become a cleaner.You will be approved within 24 hours."];
+                });
+            }else{
+                UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"This is embarrasing."
+                                                                 message:@"Opps,an error occured."
+                                                                delegate:self
+                                                       cancelButtonTitle:@"Ok"
+                                                       otherButtonTitles:nil];
+                [alert show];
+            }
+        }];
     }];
 }
 

@@ -9,8 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @interface AccountViewController : UIViewController
-@property (nonatomic, strong) IBOutlet UILabel *firstNameLabel;
-@property (nonatomic, strong) IBOutlet UILabel *lastNameLabel;
-@property (nonatomic, strong) IBOutlet UILabel *emailLabel;
-@property (nonatomic, strong) IBOutlet UILabel *mobileLabel;
+@property (nonatomic, strong) IBOutlet UITextField *firstNameField;
+@property (nonatomic, strong) IBOutlet UITextField *lastNameField;
+@property (nonatomic, strong) IBOutlet UITextField *emailField;
+@property (nonatomic, strong) IBOutlet UITextField *mobileField;
+@property (nonatomic, strong) IBOutlet UITextField *streetAddressField;
+@property (nonatomic, strong) IBOutlet UITextField *roomNumberField;
+@property (nonatomic, strong) IBOutlet UITextField *zipCodeField;
 @end

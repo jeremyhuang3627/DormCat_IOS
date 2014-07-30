@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface TimePickerViewController : UIViewController
-
+@property (nonatomic,strong) IBOutlet UIDatePicker * datePicker;
 @end
