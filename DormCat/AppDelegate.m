@@ -17,7 +17,7 @@
 #import "DormCatCustomer.h"
 #import "Macros.h"
 
-#define FACEBOOK_SCHEME @"fb244051742471725"
+#define FACEBOOK_SCHEME @"##########"
 #define GOOGLE_SCHEME @"dorminate.dormcat"
 
 @interface AppDelegate () <MSDynamicsDrawerViewControllerDelegate>
